@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "sources": [
+    "models"
+  ],
+  "projections": {
+    "source": {
+      "plugins": {
+        "typescript-codegen": {
+          "service": "example.weather#Weather",
+          "package": "@example.weather/Weather",
+          "packageVersion": "0.0.1"
+        },
+        "kotlin-codegen": {
+          "service": "example.weather#Weather",
+          "package": {
+            "name": "example.weather",
+            "version": "0.0.1"
+          }
+        }
+      }
+    }
+  },
+  "maven": {
+    "dependencies": [
+      "software.amazon.smithy:smithy-model:1.30.0",
+      "software.amazon.smithy.typescript:smithy-typescript-codegen:0.14.0",
+      "software.amazon.smithy.kotlin:smithy-kotlin-codegen:0.14.0"
+    ]
+  }
+}
